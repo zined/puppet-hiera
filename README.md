@@ -19,13 +19,14 @@ class { 'hiera':
 The resulting output in /etc/puppet/hiera.yaml:
 ```yaml
 ---
-:backends: - yaml
-:logger: console
-:hierarchy:
+backends:
+  - yaml
+logger: console
+hierarchy:
   - "%{environment}/%{calling_class}"
   - "%{environment}"
   - common
-:yaml:
+yaml:
    :datadir: /etc/puppet/hieradata
 ```
 
