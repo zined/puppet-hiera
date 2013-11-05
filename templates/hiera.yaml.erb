@@ -3,11 +3,9 @@
 <% @backends.each do |backend| -%>
 <%= backend.keys.to_yaml.split("\n")[1..-1].join("\n") %>
 <% end -%>
-
 :logger: console
 :hierarchy:
 <%= hierarchy.to_yaml.split("\n")[1..-1].join("\n") %>
-
 <% @backends.each do |backend| -%>
 <% backend.each_pair do |backend_name,config| -%>
 :<%= backend_name %>:
